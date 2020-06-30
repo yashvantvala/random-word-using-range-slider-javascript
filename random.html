@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<style type="text/css">
+		*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  
+  background-position: center;
+ 
+  min-height: 100vh;
+}
+.slider {
+    appearance: none;
+    height: 15px;
+    border-radius: 5%;
+    background: #919090;
+  
+    outline: none;
+    margin: 15px;
+  }
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 35px;
+    width: 35px;
+    background-color: cyan;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    appearance: none;
+    height: 35px;
+    width: 35px;
+    background-color: cyan;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  button {
+    border-radius: 5px;
+    padding: 10px 35px;
+    margin: 25px 0;
+  }
+  
+
+
+	</style>
+</head>
+<body>
+	<div class="container w-50 mt-5 text-center">
+		<div class="text-center m-3 text-dark display-3">
+			Limit: <span class="limit"></span>
+		</div>
+		<input type="range" min="1" onchange="onSliderChange(event)" max="30" id="ranger" class="slider form-control-range"/>
+		<button class="btn btn-info" onclick="GenerateWords()">Generate</button>
+			
+		<div class="card card-body bg-dark">
+			<p class="display-4 text-white" id="word" >
+				
+			</p>
+		</div>	
+		
+	</div>
+
+	<script type="text/javascript" src="word.js"></script>
+</body>
+</html>
